@@ -1,0 +1,71 @@
+/* Minimal, smooth global motion layer for Hackwave static pages */
+:root {
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-duration: 620ms;
+  --motion-distance: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  animation: page-fade-in 420ms var(--motion-ease) both;
+}
+
+.motion-reveal {
+  opacity: 0;
+  transform: translateY(var(--motion-distance));
+  transition: opacity var(--motion-duration) var(--motion-ease),
+    transform var(--motion-duration) var(--motion-ease);
+  will-change: opacity, transform;
+}
+
+.motion-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Keep hover motion subtle so existing styling still leads the visual language */
+.motion-hover,
+button,
+a {
+  transition: transform 240ms var(--motion-ease),
+    filter 240ms var(--motion-ease),
+    opacity 240ms var(--motion-ease);
+}
+
+.motion-hover:hover,
+button:hover,
+a:hover {
+  transform: translateY(-1px);
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    animation: none !important;
+  }
+
+  .motion-reveal,
+  .motion-reveal.is-visible,
+  .motion-hover,
+  button,
+  a {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

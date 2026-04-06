@@ -10,6 +10,7 @@
 	<link href="_app/immutable/assets/Modal.b83201c6.css" rel="stylesheet">
 	<link href="_app/immutable/assets/2.6a7550ae.css" rel="stylesheet">
 	<link href="_app/immutable/assets/10.e54beb10.css" rel="stylesheet">
+	<link href="assets/site-animations.css" rel="stylesheet">
 	<title>HACKWAVE 2.0</title>
 	<meta name="description" content="HACKWAVE 2.0">
 	<meta property="og:title" content="HACKWAVE 2.0">
@@ -109,6 +110,14 @@
 						class="flex w-full max-w-screen-2xl flex-1 items-center px-3 pb-0 pt-12 md:px-6 md:pt-14 xl:px-8 mt-[80px] h-[1024px] flex-col justify-end gap-6 xl:mt-[96px] xl:h-auto xl:flex-row xl:items-end xl:justify-center xl:pt-0">
 						<div
 							class="group relative flex max-h-[400px] flex-1 flex-col items-center justify-center gap-4 p-[80px] xl:max-h-none xl:max-w-[552px] xl:self-stretch 2xl:max-w-[608px]">
+							<div class="absolute left-1/2 top-[190px] z-30 -translate-x-1/2 md:top-[220px] xl:top-[320px] 2xl:top-[340px]">
+								<div class="border-breakout-black bg-breakout-yellow border-[3px] px-3 py-1.5 md:px-4 md:py-2"
+									style="box-shadow: -6px 6px 0px 0px #171615;">
+									<span
+										class="text-breakout-black font-architects-daughter text-xs md:text-sm font-bold uppercase tracking-wide whitespace-nowrap">4-5th
+										May 2026</span>
+								</div>
+							</div>
 							<div class="border-breakout-black absolute flex h-[400px] w-[366px] flex-col items-center justify-center overflow-hidden rounded-[4px] border-[3px] border-solid md:w-[720px] xl:h-[832px] xl:w-[552px] 2xl:w-[608px]"
 								data-svelte-h="svelte-11ue858">
 								<div class="h-[996.452px] w-[1743.792px] flex-shrink-0 -rotate-90 object-cover transition-transform duration-300 group-hover:scale-[0.95]"
@@ -3361,6 +3370,7 @@
 			link.addEventListener('click', toggleMenu);
 		});
 	</script>
+	<script defer src="assets/site-animations.js"></script>
 </body>
 
 </html>
