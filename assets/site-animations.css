@@ -3,6 +3,44 @@
   --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
   --motion-duration: 620ms;
   --motion-distance: 16px;
+  --breakout-yellow: rgb(247 224 84);
+    --breakout-green: rgb(86 188 108);
+    --breakout-blue: rgb(68 210 255);
+    --devfolio-blue: rgb(55 112 255);
+    --devfolio-grey: rgb(39 51 57);
+  }
+  
+  /* Fallback utilities for color tokens used in the static pages */
+  .bg-breakout-yellow {
+    background-color: var(--breakout-yellow) !important;
+  }
+  
+  .text-breakout-yellow {
+    color: var(--breakout-yellow) !important;
+  }
+  
+  .border-breakout-yellow {
+    border-color: var(--breakout-yellow) !important;
+  }
+  
+  .bg-breakout-green {
+    background-color: var(--breakout-green) !important;
+  }
+  
+  .text-breakout-green {
+    color: var(--breakout-green) !important;
+  }
+  
+  .border-breakout-green {
+    border-color: var(--breakout-green) !important;
+  }
+  
+  .hover\:text-breakout-yellow:hover {
+    color: var(--breakout-yellow) !important;
+  }
+  
+  .hover\:text-breakout-green:hover {
+    color: var(--breakout-green) !important;
 }
 
 html {
